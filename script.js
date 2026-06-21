@@ -164,17 +164,20 @@ const background = document.getElementById("background");
 const start = document.getElementById("Start");
 const main = document.getElementById("Main");
 const LB = document.getElementById("LB");
-const WB = document.getElementById("WB")
+const WB = document.getElementById("WB");
 
 LB.classList.add("show");
 main.style.display = "none";
 
-start.addEventListener("click", function () {
-    background.play();
-    WB.textContent = "Loading Configurations"
+start.addEventListener("pointerdown", function () {
+    background.play().catch(err => console.log(err));
+
+    WB.textContent = "Loading Configurations";
     start.hidden = true;
+
     setTimeout(function () {
         main.style.display = "block";
         LB.classList.remove("show");
+        LB.style.pointerEvents = "none";
     }, 3000);
 });
