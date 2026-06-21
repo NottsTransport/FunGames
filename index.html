@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<audio id="sound" src="opalite-lyrics.mp3"></audio>
+<body>
+
+        <div id="LB" class="lightboxback">
+            <div class="lightboxct">
+                <h2>Welcome Back!</h2>
+                <input placeholder="Enter Password" id="pass" class="logbtn" type="password">
+                  <button id="paswordbtn" class="logbtn">Unlock</button>  
+            </div>
+        </div>
+
+
+    <div id="Main" class="container">
+        <h1>Configurations</h1>
+        <hr>
+        <h2>Color</h2>
+        <h3 id="hextext">Hex: </h3>
+        <input id="color" type="color">
+        <hr>
+        <h2>Transparency</h2>
+        <h3 id="TransparencyTxt">50%</h3>
+        <p>Adjust the amout of Transparency</p>
+        <input id="Transparency" type="range" min="15" max="100" value="100">
+        <hr>
+        <h2>Border Radius</h2>
+        <h3 id="BorderRadiusTxt">0px</h3>
+        <p>Adjust the amount of Corner Radius</p>
+        <input id="BorderRadius" type="range" min="5" max="100" value="15">
+        <hr>
+        <h2>Rotate</h2>
+        <h3 id="RotateTxt">0 deg</h3>
+        <p>Adjust the amount of Rotation</p>
+        <input id="Rotate" type="range" min="0" max="360" value="0">
+        <hr>
+        <h2>Emoji</h2>
+            <p>Choose an emoji to show in the middle of the Box!</p>
+        <select name="" id="Emj">
+            <option value="0">None</option>
+            <option value="1">❤️ | Red Heart</option>
+            <option value="2">🩷 | Pink Heart</option>            
+            <option value="3">🐶 | Dog</option>
+            <option value="4">🏴󠁧󠁢󠁥󠁮󠁧󠁿 | England</option>
+        </select>
+        <hr>
+        <h2>Check Boxes</h2>
+        <p>Check Boxes are for True/False Configurations</p>
+        <div class="checkflex">
+        <label class="check">
+            <input id="checkbox" type="checkbox">
+            <span id="span">Sound</span>
+        </label>
+        <label class="check">
+            <input id="LM" type="checkbox" >
+            <span id="span">Light Glass Mode</span>
+        </label>
+
+        
+        
+
+        </div>
+        <hr>
+        <button id="Set" class="btn">Set Configurations</button>
+        <button id="Reset" class="rbtn">Reset Values</button>
+        <div id="box" class="box">
+            <h5 id="emojitxt"></h5>
+        </div>        
+        <p>More Configurations, will come overtime!</p>
+        <h4>© 2026 - Cameron's Div Configurations Sim!</h4>
+    </div>
+
+    
+    <script src="script.js"></script>
+    <!-- <script src="pass.js"></script> -->
+</body>
+</html>
