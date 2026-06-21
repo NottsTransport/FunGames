@@ -160,7 +160,21 @@ Resetvals.addEventListener("click", function () {
     box.style.borderRadius = borderRadius.value + "px";
 });
 
-pass.addEventListener("focus", function(){
-    pass.value = ""
-    pass.style.border = "1px solid rgba(255, 255, 255, 0.15)";
-}) 
+const background = document.getElementById("background");
+const start = document.getElementById("Start");
+const main = document.getElementById("Main");
+const LB = document.getElementById("LB");
+const WB = document.getElementById("WB")
+
+LB.classList.add("show");
+main.style.display = "none";
+
+start.addEventListener("click", function () {
+    background.play();
+    WB.textContent = "Loading Configurations"
+    start.hidden = true;
+    setTimeout(function () {
+        main.style.display = "block";
+        LB.classList.remove("show");
+    }, 3000);
+});
